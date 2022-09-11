@@ -1,4 +1,4 @@
-body{min-width:100vw;}
+body{min-width:100vw;font-family:MapoFlowerIsland !important;}
 section.main{max-width:42em; margin:0 auto;}
 
 section.upper-image{width:100%;}
@@ -27,4 +27,9 @@ section.invitation-text .word{text-align:center;font-size:12px;margin-top:2.5em;
   }
 }
 
-
+@font-face {
+  font-family: 'MapoFlowerIsland';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
