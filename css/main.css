@@ -1,0 +1,30 @@
+body{min-width:100vw;}
+section.main{max-width:42em; margin:0 auto;}
+
+section.upper-image{width:100%;}
+section.upper-image .upper{width:100%;}
+section.upper-image .upper.image{width:100%;box-sizing: border-box;}
+section.upper-image .upper.image > img{width:100%;}
+
+section.upper-image .upper.info{text-align:center;margin-top:2em;font-size:20px;}
+section.upper-image .upper.info .groom-bride{margin-bottom:1em;}
+section.upper-image .upper.info .time-where{line-height:30px;}
+
+
+.fadeIn{transform:translateX(-50%);opacity:0;}
+.fadeOut{transform:translateX(0);opacity: 1;}
+.delay-1{transition:1s;}
+.delay-2{transition:2s;}
+
+section.invitation-text{border-top:0.1px solid #222;margin:0 3.125rem;margin-top:4em;box-sizing: border-box;}
+section.invitation-text .word{text-align:center;font-size:12px;margin-top:2.5em;line-height:30px;}
+@keyframes fadeInAfter1s {
+  from {
+    transform:translateX(-50%);
+  }
+  to {
+    transform:
+  }
+}
+
+
