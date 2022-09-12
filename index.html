@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="/css/main.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
 </head>
 <body>
@@ -64,9 +67,115 @@
       </div>
     </section>
 
+    <section class="calendar">
+      <div class="title">Calendar</div>
+      <img src="/image/bg-calendar.jpg" alt="달력" />
+    </section>
+
+    <section class="gallery fadeIn delay-2">
+      <div class="title">
+        Gallery
+      </div>
+      <div class="gallery-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/image/slide/slide01.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide02.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide03.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide04.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide05.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide06.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide07.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide08.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide09.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide10.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide11.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide12.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide13.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide14.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide15.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide16.jpg" alt="슬라이드01" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="account">
+      <div class="title">Account</div>
+      <div class="account-info">
+        <div class="title">신랑 & 신부에게 마음 전하기</div>
+        <div class="groom">
+          신랑: 농협 394-02-265170 장한별
+        </div>
+        <div class="bride">
+          신부: 농협 394-02-265170 장한별
+        </div>
+      </div>
+    </section>
+
+    <section class="location">
+      <div class="title">Location</div>
+      <div id="map"></div>
+    </section>
+
   </section>
 
   <script src="/js/main.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a69568d9cfc03a935606c0c001640b6c"></script>
+  <script>
+    const swiperDiv = new Swiper('.gallery-swiper', {
+      direction: 'horizontal',
+      loop: true,
+      centeredSlides: true,
+      spaceBetween: 30,
+    })
+
+    var container = document.getElementById('map');
+    var options = {
+      center: new kakao.maps.LatLng(37.49937632018082, 126.71522039060677),
+      level: 3
+    };
+
+    var map = new kakao.maps.Map(container, options);
+
+    // 지도를 클릭한 위치에 표출할 마커입니다
+    var marker = new kakao.maps.Marker({ 
+        // 지도 중심좌표에 마커를 생성합니다 
+        position: map.getCenter() 
+    }); 
+    // 지도에 마커를 표시합니다
+    marker.setMap(map);
+  </script>
 </body>
 </html>
 
