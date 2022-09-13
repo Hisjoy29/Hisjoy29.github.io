@@ -142,21 +142,11 @@
       <div class="title">Account</div>
       <div class="account-info">
         <div class="title">신랑 & 신부에게 마음 전하기</div>
-        <div class="groom">
-          신랑: 농협 394-02-265170 장한별
-          <img src="/image/ico-copy.png" alt="복사하기" onclick="copy_groom_account()" />
+        <div class="groom" onClick="popup_groom_account()">
+          신랑측 계좌번호
         </div>
-        <div class="bride">
-          신부: <br />
-          <div class="bride-father">
-            <span>- 신부 혼주: 우리은행 1002-543-161921 정교화</span>
-            <img src="/image/ico-copy.png" alt="복사하기" onclick="copy_bride_father_account()" />
-          </div>
-          <div class="bride-account">
-            - 신부: 우리은행 1002-839-625077 정주희 
-            <img src="/image/ico-copy.png" alt="복사하기" onclick="copy_bride_account()"/>
-          </div>
-         
+        <div class="bride" onClick="popup_bride_account()">
+         신부측 계좌번호
         </div>
       </div>
     </section>
@@ -181,8 +171,45 @@
     <section class="thank-you">
       감사합니다.
     </section>
-
   </section>
+
+  <div class="popup" id="popup-groom">
+    <div class="popup-container">
+      <div class="title">
+        신랑측
+        <button class="copy-btn" onclick="copy_groom_account()">복사하기</button>
+      </div>
+
+      <div class="account">
+        농협은행 (예금주: 장한별)<br />
+        394-02-265170
+      </div>
+      <div class="close-btn" onclick="close_popup_groom()">닫기</div>
+    </div>
+  </div>
+
+  <div class="popup" id="popup-bride">
+    <div class="popup-container">
+      <div class="title">
+        신부 혼주측
+        <button class="copy-btn" onclick="copy_bride_father_account()">복사하기</button>
+      </div>
+      <div class="account">
+        우리은행 (예금주: 정교화)<br />
+        1002-543-161921
+      </div>
+
+      <div class="title last">
+        신부측
+        <button class="copy-btn" onclick="copy_bride_account()">복사하기</button>
+      </div>
+      <div class="account">
+        우리은행 (예금주: 정주희)<br />
+        1002-839-625077
+      </div>
+      <div class="close-btn" onclick="close_popup_bride()">닫기</div>
+    </div>
+  </div>
 
   <script src="/js/main.js"></script>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a69568d9cfc03a935606c0c001640b6c"></script>

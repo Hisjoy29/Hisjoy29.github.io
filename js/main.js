@@ -99,3 +99,34 @@ function copy_bride_account()
 
   return alert("복사되었습니다.")
 }
+
+function popup_groom_account()
+{
+  const popupGroomDiv = document.querySelector("#popup-groom")
+  popupGroomDiv.classList.add('ing')
+  return setTimeout(function(){
+    popupGroomDiv.classList.add('active')
+  },200)
+  
+}
+
+function popup_bride_account()
+{
+  const popupBrideDiv = document.querySelector("#popup-bride")
+  popupBrideDiv.classList.add('ing')
+  return setTimeout(function(){popupBrideDiv.classList.add('active')}, 200)
+}
+
+function close_popup_groom()
+{
+  const popupGroomDiv = document.querySelector('#popup-groom')
+  popupGroomDiv.classList.remove('active')
+  return setTimeout(function(){popupGroomDiv.classList.remove('ing')},200)
+}
+
+function close_popup_bride()
+{
+  const popupBrideDiv = document.querySelector('#popup-bride')
+  popupBrideDiv.classList.remove('active')
+  return setTimeout(function(){popupBrideDiv.classList.remove('ing')},200)
+}
