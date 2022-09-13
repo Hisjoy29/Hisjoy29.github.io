@@ -73,6 +73,7 @@ section.account{width:calc(100% - 60px);margin:0 auto;margin-top:80px;}
 section.account > .title{font-size:28px;font-weight:700;border-bottom:1px solid #222;padding-bottom:40px;}
 
 section.account .account-info{margin-top:40px;}
+section.account .account-info .title{font-size:20px;}
 section.account .account-info .groom{margin-top:30px;display:flex;justify-content: center;align-items: center;font-size:14px;height:50px;background-color:#f7f7e3;cursor:pointer;}
 section.account .account-info div > img{width:25px;margin-left:10px;}
 section.account .account-info .bride{margin-top:20px;line-height:30px;font-size:14px;display:flex;justify-content: center;align-items: center;height:50px;background-color:#f7f7e3;cursor: pointer;}
