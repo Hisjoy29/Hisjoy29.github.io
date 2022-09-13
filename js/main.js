@@ -54,3 +54,48 @@ function message_to_bride()
 {
   return document.location.href = "sms:010-3371-5003"
 }
+
+function copy_groom_account()
+{
+  const textarea = document.createElement("textarea")
+
+  document.body.appendChild(textarea)
+
+  textarea.value = "농협 394-02-265170 장한별"
+  textarea.select()
+
+  document.execCommand("copy")
+  document.body.removeChild(textarea)
+
+  return alert("복사되었습니다.")
+}
+
+function copy_bride_father_account()
+{
+  const textarea = document.createElement("textarea")
+
+  document.body.appendChild(textarea)
+
+  textarea.value = "우리은행 1002-543-161921 정교화"
+  textarea.select()
+
+  document.execCommand("copy")
+  document.body.removeChild(textarea)
+
+  return alert("복사되었습니다.")
+}
+
+function copy_bride_account()
+{
+  const textarea = document.createElement("textarea")
+
+  document.body.appendChild(textarea)
+
+  textarea.value = "우리은행 1002-839-625077 정주희"
+  textarea.select()
+
+  document.execCommand("copy")
+  document.body.removeChild(textarea)
+
+  return alert("복사되었습니다.")
+}

@@ -6,7 +6,7 @@
 }
 
 body{min-width:100vw;font-family:MapoFlowerIsland !important;}
-section.main{max-width:42em; margin:0 auto;margin-bottom:200px;}
+section.main{max-width:42em; margin:0 auto;margin-bottom:80px;}
 
 section.upper-image{width:100%;}
 section.upper-image .upper{width:100%;}
@@ -24,7 +24,7 @@ section.upper-image .upper.info .time-where > span{font-size:20px;line-height:16
 .delay-1{transition:1s;}
 .delay-2{transition:2s;}
 
-section.invitation-text{padding:80px 0;box-sizing: border-box;background-color:#f7f7e3;margin-top:100px;}
+section.invitation-text{padding:80px 0;box-sizing: border-box;background-color:#f7f7e3;margin-top:80px;}
 section.invitation-text .word{text-align:center;font-size:17px;line-height:30px;}
 @keyframes fadeInAfter1s {
   from {
@@ -60,9 +60,9 @@ section.calling .calling-side .side .mother{margin-top:15px;}
 
 section.calendar{width:calc(100% - 60px);margin:0 auto;margin-top:80px;}
 section.calendar .title{font-size:28px;font-weight:700;border-bottom:1px solid #222;padding-bottom:40px;}
-section.calendar > img{width:100%;}
+section.calendar > img{width:100%;display:inline-block;margin-top:20px;}
 
-section.gallery{width:calc(100% - 60px);margin:0 auto;margin-top:100px;}
+section.gallery{width:calc(100% - 60px);margin:0 auto;margin-top:80px;}
 section.gallery .title{font-size:28px;font-weight:700;border-bottom:1px solid #222;padding-bottom:40px;}
 section.gallery .gallery-swiper{margin-top:40px;width:100%;overflow:hidden;}
 section.gallery .gallery-swiper .swiper-wrapper{align-items:center;}
@@ -73,9 +73,19 @@ section.account{width:calc(100% - 60px);margin:0 auto;margin-top:80px;}
 section.account > .title{font-size:28px;font-weight:700;border-bottom:1px solid #222;padding-bottom:40px;}
 
 section.account .account-info{margin-top:40px;}
-section.account .account-info .groom{margin-top:30px;display:flex;align-items: center;}
-section.account .account-info .bride{margin-top:10px;display:flex;align-items: center;}
+section.account .account-info .groom{margin-top:30px;display:flex;align-items: center;font-size:14px;}
+section.account .account-info div > img{width:25px;margin-left:10px;}
+section.account .account-info .bride{margin-top:20px;line-height:30px;font-size:14px;}
+section.account .account-info .bride .bride-father,
+section.account .account-info .bride .bride-account{display:flex;align-items: center;}
+section.account .account-info .bride .bride-account{margin-top:10px;}
 
 section.location{width:calc(100% - 60px);margin:0 auto;margin-top:80px;}
 section.location .title{font-size:28px;font-weight:700;border-bottom:1px solid #222;padding-bottom:40px;}
 section.location #map{height:300px;margin-top:40px;}
+section.location > span{margin-top:30px;display:inline-block;font-size:24px;font-weight:700;}
+section.location .location-info{margin-top:20px;font-size:20px;line-height: 26px;}
+section.location .location-info > span{font-size:16px;display:inline-block;margin-top:10px;}
+section.location #restaurant-map{height:300px;margin-top:40px;}
+
+section.thank-you{margin-top:80px;padding:60px 0; display:flex;justify-content: center; align-items: center; background-color:#f7f7e3;font-size:30px;font-weight:700;}

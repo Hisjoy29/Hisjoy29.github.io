@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>장한별, 정주희의 모바일 청첩장</title>
 
-  <meta property="og:title" content="장한별, 정주희의 모바일 청첩장" />
+  <meta property="og:title" content="장한별💍정주희 결혼식에 초대합니다!" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bigstargithub.github.io" />
   <meta property="og:image" content="/image/upper-image.jpg" />
@@ -37,11 +37,13 @@
 
     <section class="invitation-text delay-2 fadeIn">
       <div class="word">
-        하나님의 인도하심으로 서로 만나고<br />
-        사랑을 시작하게된 두 사람이<br />
-        이제 하나가 되어 가정을 이루려고 합니다.<br />
-        오셔서 축하해주시고 저희 가정의 첫걸음을<br /> 
-        함께하여 주십시오.
+        하나님의 인도하심으로 서로 만나<br />
+        사랑을 키워 온 저희 두 사람이<br />
+        이제 하나가 되어 아름다운 <br />
+        믿음의 가정을 이루려 합니다.<br /><br />
+        저희 두 사람의 결혼식에 <br />
+        소중한 분들께서 함께 해주시면<br /> 
+        저희에게 더 큰 기쁨이 될 것입니다.
       </div>
 
       <div class="family">
@@ -67,9 +69,9 @@
       </div>
     </section>
 
-    <section class="calendar">
-      <div class="title">Calendar</div>
-      <img src="/image/bg-calendar.jpg" alt="달력" />
+    <section class="calendar fadeIn delay-2">
+      <div class="title">Wedding Day</div>
+      <img src="/image/bg-calendar.png" alt="달력" />
     </section>
 
     <section class="gallery fadeIn delay-2">
@@ -126,26 +128,58 @@
           <div class="swiper-slide">
             <img src="/image/slide/slide16.jpg" alt="슬라이드01" />
           </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide17.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide18.jpg" alt="슬라이드01" />
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="account">
+    <section class="account fadeIn delay-2">
       <div class="title">Account</div>
       <div class="account-info">
         <div class="title">신랑 & 신부에게 마음 전하기</div>
         <div class="groom">
           신랑: 농협 394-02-265170 장한별
+          <img src="/image/ico-copy.png" alt="복사하기" onclick="copy_groom_account()" />
         </div>
         <div class="bride">
-          신부: 농협 394-02-265170 장한별
+          신부: <br />
+          <div class="bride-father">
+            <span>- 신부 혼주: 우리은행 1002-543-161921 정교화</span>
+            <img src="/image/ico-copy.png" alt="복사하기" onclick="copy_bride_father_account()" />
+          </div>
+          <div class="bride-account">
+            - 신부: 우리은행 1002-839-625077 정주희 
+            <img src="/image/ico-copy.png" alt="복사하기" onclick="copy_bride_account()"/>
+          </div>
+         
         </div>
       </div>
     </section>
 
-    <section class="location">
+    <section class="location fadeIn delay-2">
       <div class="title">Location</div>
+      <span>- 식장위치</span>
       <div id="map"></div>
+      <div class="location-info">
+        인천 주안장로교회 부평성전 지하2층 글로리아홀<br />
+        <span>인천 부평구 부흥로 213 (우) 21377</span>
+      </div>
+
+      <span> - 식사장소</span>
+      <div id="restaurant-map"></div>
+      <div class="location-info">
+        쿠우쿠우 부평점<br />
+        <span>인천 부평구 부흥로 264 동아웰빙타운 9층</span>
+      </div>
+    </section>
+
+    <section class="thank-you">
+      감사합니다.
     </section>
 
   </section>
@@ -175,6 +209,20 @@
     }); 
     // 지도에 마커를 표시합니다
     marker.setMap(map);
+
+    const restaurantContainer = document.getElementById("restaurant-map")
+    const mapOptions = {
+      center: new kakao.maps.LatLng(37.49832928074395, 126.72104267983306),
+      level: 3
+    }
+
+    const restaurantMap = new kakao.maps.Map(restaurantContainer, mapOptions)
+
+    const mapMarker = new kakao.maps.Marker({
+      position: restaurantMap.getCenter()
+    })
+
+    mapMarker.setMap(restaurantMap)
   </script>
 </body>
 </html>
