@@ -100,6 +100,36 @@ function copy_bride_account()
   return alert("복사되었습니다.")
 }
 
+function copy_address_wedding()
+{
+  const textarea = document.createElement("textarea")
+
+  document.body.appendChild(textarea)
+
+  textarea.value = "인천 부평구 부흥로 213"
+  textarea.select()
+
+  document.execCommand("copy")
+  document.body.removeChild(textarea)
+
+  return alert("복사되었습니다.")
+}
+
+function copy_address_restaurant()
+{
+  const textarea = document.createElement("textarea")
+
+  document.body.appendChild(textarea)
+
+  textarea.value = "인천 부평구 부흥로 264 동아웰빙타운 9층"
+  textarea.select()
+
+  document.execCommand("copy")
+  document.body.removeChild(textarea)
+
+  return alert("복사되었습니다.")
+}
+
 function popup_groom_account()
 {
   const popupGroomDiv = document.querySelector("#popup-groom")

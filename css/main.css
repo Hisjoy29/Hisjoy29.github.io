@@ -64,7 +64,7 @@ section.calendar > img{width:100%;display:inline-block;margin-top:20px;}
 
 section.gallery{width:calc(100% - 60px);margin:0 auto;margin-top:80px;}
 section.gallery .title{font-size:28px;font-weight:700;border-bottom:1px solid #222;padding-bottom:40px;}
-section.gallery .gallery-swiper{margin-top:40px;width:100%;overflow:hidden;}
+section.gallery .gallery-swiper{margin-top:40px;width:100%;overflow:hidden;background-color:#f7f7e3;}
 section.gallery .gallery-swiper .swiper-wrapper{align-items:center;}
 section.gallery .gallery-swiper .swiper-wrapper .swiper-slide{height:100%;display:flex;align-items: center;}
 section.gallery .gallery-swiper .swiper-wrapper .swiper-slide > img{width:100%;}
@@ -82,12 +82,19 @@ section.account .account-info .bride .bride-account{display:flex;align-items: ce
 section.account .account-info .bride .bride-account{margin-top:10px;}
 
 section.location{width:calc(100% - 60px);margin:0 auto;margin-top:80px;}
-section.location .title{font-size:28px;font-weight:700;border-bottom:1px solid #222;padding-bottom:40px;}
-section.location #map{height:300px;margin-top:40px;}
+section.location > .title{font-size:28px;font-weight:700;border-bottom:1px solid #222;padding-bottom:40px;}
+
 section.location > span{margin-top:30px;display:inline-block;font-size:24px;font-weight:700;}
 section.location .location-info{margin-top:20px;font-size:20px;line-height: 26px;}
 section.location .location-info > span{font-size:16px;display:inline-block;margin-top:10px;}
-section.location #restaurant-map{height:300px;margin-top:40px;}
+section.location .address{margin-top:10px;display:flex;align-items: center;}
+section.location .address > span{font-size:20px;}
+section.location .address > img{width:20px; display:inline-block;margin-left:10px;}
+
+section.location .how-to-go{margin-top:25px;}
+section.location .how-to-go .title{font-size:20px;}
+section.location .how-to-go > div{font-size:16px;}
+section.location .how-to-go > div.subway{margin-top:8px;}
 
 section.thank-you{margin-top:80px;padding:60px 0; display:flex;justify-content: center; align-items: center; background-color:#f7f7e3;font-size:30px;font-weight:700;}
 
@@ -102,3 +109,4 @@ section.thank-you{margin-top:80px;padding:60px 0; display:flex;justify-content: 
 .popup .popup-container .account{margin-top:20px;line-height:20px;}
 
 .popup .popup-container .close-btn{width:100%; height:40px; display:flex;justify-content: center;align-items: center;background-color:#0067a3;color:#fff;margin-top:30px;}
+

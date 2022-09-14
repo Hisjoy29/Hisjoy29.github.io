@@ -81,6 +81,22 @@
       <div class="gallery-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
+            <img src="/image/slide/slide06.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide05.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide07.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide08.jpg" alt="슬라이드01" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/image/slide/slide09.jpg" alt="슬라이드01" />
+          </div>
+
+          <div class="swiper-slide">
             <img src="/image/slide/slide01.jpg" alt="슬라이드01" />
           </div>
           <div class="swiper-slide">
@@ -91,21 +107,6 @@
           </div>
           <div class="swiper-slide">
             <img src="/image/slide/slide04.jpg" alt="슬라이드01" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/image/slide/slide05.jpg" alt="슬라이드01" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/image/slide/slide06.jpg" alt="슬라이드01" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/image/slide/slide07.jpg" alt="슬라이드01" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/image/slide/slide08.jpg" alt="슬라이드01" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/image/slide/slide09.jpg" alt="슬라이드01" />
           </div>
           <div class="swiper-slide">
             <img src="/image/slide/slide10.jpg" alt="슬라이드01" />
@@ -153,17 +154,31 @@
     <section class="location fadeIn delay-2">
       <div class="title">Location</div>
       <span>- 식장위치</span>
-      <div id="map"></div>
       <div class="location-info">
         인천 주안장로교회 부평성전 지하2층 글로리아홀<br />
-        <span>인천 부평구 부흥로 213 (우) 21377</span>
+        <div class="address">
+          <span>인천 부평구 부흥로 213 (우) 21377</span>
+          <img src="/image/ico-copy.png" alt="복사하기" onclick="copy_address_wedding()" />
+        </div>
+        <div class="how-to-go">
+          <div class="title">오시는 길</div>
+          <div class="bus">버스: 한국아파트 앞에서 하차<br />
+            (마을버스: 560번, 562번, 574번 / 시내버스: 1번)
+          </div>
+          <div class="subway">
+            지하철: 부평시작역(인천 지하철 1호선)에서 하차<br />
+            4번출입구로 나오셔서 동아아파트 방면 도보 5분
+          </div>
+        </div>
       </div>
 
       <span> - 식사장소</span>
-      <div id="restaurant-map"></div>
       <div class="location-info">
         쿠우쿠우 부평점<br />
-        <span>인천 부평구 부흥로 264 동아웰빙타운 9층</span>
+        <div class="address">
+          <span>인천 부평구 부흥로 264 동아웰빙타운 9층</span>
+          <img src="/image/ico-copy.png" alt="복사하기" onclick="copy_address_restaurant()" />
+        </div>
       </div>
     </section>
 
@@ -211,45 +226,6 @@
   </div>
 
   <script src="/js/main.js"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a69568d9cfc03a935606c0c001640b6c"></script>
-  <script>
-    const swiperDiv = new Swiper('.gallery-swiper', {
-      direction: 'horizontal',
-      loop: true,
-      centeredSlides: true,
-      spaceBetween: 30,
-    })
-
-    var container = document.getElementById('map');
-    var options = {
-      center: new kakao.maps.LatLng(37.49937632018082, 126.71522039060677),
-      level: 3
-    };
-
-    var map = new kakao.maps.Map(container, options);
-
-    // 지도를 클릭한 위치에 표출할 마커입니다
-    var marker = new kakao.maps.Marker({ 
-        // 지도 중심좌표에 마커를 생성합니다 
-        position: map.getCenter() 
-    }); 
-    // 지도에 마커를 표시합니다
-    marker.setMap(map);
-
-    const restaurantContainer = document.getElementById("restaurant-map")
-    const mapOptions = {
-      center: new kakao.maps.LatLng(37.49832928074395, 126.72104267983306),
-      level: 3
-    }
-
-    const restaurantMap = new kakao.maps.Map(restaurantContainer, mapOptions)
-
-    const mapMarker = new kakao.maps.Marker({
-      position: restaurantMap.getCenter()
-    })
-
-    mapMarker.setMap(restaurantMap)
-  </script>
 </body>
 </html>
 
