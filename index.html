@@ -21,6 +21,10 @@
 
 </head>
 <body>
+  <iframe src="/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+  <audio id="audio-play" autoplay class="active">
+    <source src="/bg.mp3">
+  </audio>
   <section class="main">
     <section class="upper-image">
       <div class="upper image">
@@ -224,6 +228,8 @@
       <div class="close-btn" onclick="close_popup_bride()">닫기</div>
     </div>
   </div>
+
+  <img src="/image/play_off.png" alt="음악 끄기" onclick="audio_change(this)" class="audio-play-img" />
 
   <script src="/js/main.js"></script>
   <script>

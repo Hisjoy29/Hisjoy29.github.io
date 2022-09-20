@@ -160,3 +160,20 @@ function close_popup_bride()
   popupBrideDiv.classList.remove('active')
   return setTimeout(function(){popupBrideDiv.classList.remove('ing')},200)
 }
+
+function audio_change(div)
+{
+  const audioComp = document.querySelector("#audio-play")
+  if(audioComp.classList.contains("active"))
+  {
+    audioComp.pause()
+    audioComp.classList.remove('active')
+    div.setAttribute("src", "/image/play_on.png")
+  }
+  else
+  {
+    audioComp.load()
+    audioComp.classList.add('active')
+    div.setAttribute("src", "/image/play_off.png")
+  }
+}
